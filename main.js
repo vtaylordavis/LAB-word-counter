@@ -6,17 +6,30 @@ const wordCounter = (value) => {
 
   if (value) {
     // COMPLETE THE LOGIC
-    wordCount.innerHTML = `Word Count: 0`;
+    wordCount.innerHTML = `Word Count: ${value.split(" ").length}`;
   } else {
     // if the value is empty, set the error message value to "Please input text"
-    error.innerHTML = ""; // UPDATE THIS
+    error.innerHTML = "Please input text"; // UPDATE THIS
   }
 };
 
 // OPTIONAL CHALLENGE
 const toggleMode = (btnText) => {
   // complete the function
+  if (btnText.includes('Dark')) {
+    toggleButton.innerHTML = "Light Mode"
+    document.body.style.background = 'black'
+    document.body.style.color = 'white'
+  } else {
+    toggleButton.innerHTML = "Dark Mode"
+    document.body.style.background = 'white'
+    document.body.style.color = 'black'
+  }
 };
+
+// ************************************************ //
+// **** DO NOT MODIFY THE CODE BELOW THIS LINE **** //
+// ************************************************ //
 
 // These are query selectors. We will focus on them later in the course
 const textarea = document.querySelector("textarea");
